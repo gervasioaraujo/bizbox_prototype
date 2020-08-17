@@ -137,10 +137,10 @@ export function loginAuth0WithGoogleAccount() {
                 response_type: 'token',
                 connection: 'google-oauth2',
                 scope: 'openid profile email',
-                redirect_uri: redirectUrl,
+                redirect_uri: redirectUrl
             });
 
-            // console.log(`Redirect URL (add this to Auth0): ${redirectUrl}`);
+            console.log(`Redirect URL (add this to Auth0): ${redirectUrl}`);
             // console.log(`AuthURL is:  ${authUrl}`);
 
             const result = await AuthSession.startAsync({ authUrl: authUrl });
