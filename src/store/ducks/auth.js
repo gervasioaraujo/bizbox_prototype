@@ -107,7 +107,7 @@ export function checkIsUserLoggedIn() {
 
         const token = await getToken();
         const isUserLoggedIn = (token !== null) ? true : false;
-        const userInfo = await auth0.auth.userInfo({ token });
+        const userInfo = (token !== null) ? await auth0.auth.userInfo({ token }) : null;
         dispatch({
             type: Types.IS_USER_LOGGED_IN,
             payload: { isUserLoggedIn, userInfo },
