@@ -1,4 +1,4 @@
-# Bizbox Prototype Test
+# Bizbox Developer Prototype
 
 Use you Google account or this user data to login the app:
 
